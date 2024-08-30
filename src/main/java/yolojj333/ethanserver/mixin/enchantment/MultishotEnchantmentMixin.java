@@ -17,7 +17,8 @@ public class MultishotEnchantmentMixin extends Enchantment {
 
     @Inject(
             method = "canAccept",
-            at = @At("TAIL")
+            at = @At("TAIL"),
+            cancellable = true
     )
     private void allowPiercing(Enchantment other, CallbackInfoReturnable<Boolean> cir) {
         cir.setReturnValue(super.canAccept(other));
