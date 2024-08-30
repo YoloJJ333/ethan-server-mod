@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "ethanserver",
+  "version": "${version}",
+  "name": "Ethan's Server Mod",
+  "description": "mod for ethan's create mod server",
+  "authors": ["YoloJJ333"],
+  "contact": {
+    "repo": "https://github.com/yoloj/ethan-server-mod"
+  },
+  "license": "MIT",
+  "icon": "assets/ethanserver/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "yolojj333.ethanserver.client.EthanServerClient"
+    ],
+    "main": [
+      "yolojj333.ethanserver.EthanServer"
+    ]
+  },
+  "mixins": [
+    "mixins.ethan-server.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
