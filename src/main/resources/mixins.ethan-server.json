@@ -4,8 +4,10 @@
   "package": "yolojj333.ethanserver.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "ExperienceOrbEntityMixin",
-    "MerchantEntityMixin"
+    "MerchantEntityMixin",
+    "enchantment.ExperienceOrbEntityMixin",
+    "enchantment.MultishotEnchantmentMixin",
+    "enchantment.PiercingEnchantmentMixin"
   ],
   "server": [
     "WhitelistCommandMixin"
