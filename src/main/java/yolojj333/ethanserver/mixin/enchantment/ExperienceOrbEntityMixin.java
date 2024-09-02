@@ -1,8 +1,11 @@
 package yolojj333.ethanserver.mixin.enchantment;
 
 import com.llamalad7.mixinextras.sugar.Local;
+import net.minecraft.enchantment.EnchantmentHelper;
+import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.ExperienceOrbEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.ItemStack;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
@@ -22,8 +25,8 @@ public abstract class ExperienceOrbEntityMixin {
                     target = "Lnet/minecraft/entity/ExperienceOrbEntity;amount:I"
             )
     )
-    private int mendingRepairInput(ExperienceOrbEntity instance, @Local(argsOnly = true) int amount) {
-        return amount;
+    private int mendingRepairAmountInput(ExperienceOrbEntity instance, @Local(argsOnly = true) int amount, @Local ItemStack itemStack) {
+        return EnchantmentHelper.get(itemStack).containsKey(Enchantments.INFINITY) ? amount / 2 : amount;
     }
 
     @Inject(
@@ -32,7 +35,7 @@ public abstract class ExperienceOrbEntityMixin {
             cancellable = true
     )
     private void lowerMendingRepairAmount(int experienceAmount, CallbackInfoReturnable<Integer> cir) {
-        cir.setReturnValue(Math.random() < 0.5 ? experienceAmount : 0);
+        cir.setReturnValue(Math.random() < 0.69 ? experienceAmount * 2 : 0);
     }
 
     @Inject(
@@ -41,7 +44,7 @@ public abstract class ExperienceOrbEntityMixin {
             cancellable = true
     )
     private void lowerMendingRepairCost(int repairAmount, CallbackInfoReturnable<Integer> cir) {
-        cir.setReturnValue(repairAmount);
+        cir.setReturnValue(repairAmount / 2);
     }
 
     @Redirect(
@@ -51,7 +54,8 @@ public abstract class ExperienceOrbEntityMixin {
                     target = "Lnet/minecraft/entity/ExperienceOrbEntity;repairPlayerGears(Lnet/minecraft/entity/player/PlayerEntity;I)I"
             )
     )
-    private int gainXpIfMendingFail(ExperienceOrbEntity instance, PlayerEntity player, int amount, @Local(ordinal = 1) int i) {
+    private int gainXpIfMendingFail(ExperienceOrbEntity instance, PlayerEntity player, int amount, @Local ItemStack itemStack, @Local(ordinal = 1) int i) {
+        amount = EnchantmentHelper.get(itemStack).containsKey(Enchantments.INFINITY) ? amount - (i/2) : amount;
         return i == 0 ? amount : repairPlayerGears(player, amount);
     }
 }
