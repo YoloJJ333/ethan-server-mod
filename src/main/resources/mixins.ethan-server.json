@@ -6,6 +6,7 @@
   "mixins": [
     "MerchantEntityMixin",
     "enchantment.ExperienceOrbEntityMixin",
+    "enchantment.InfinityEnchantmentMixin",
     "enchantment.MultishotEnchantmentMixin",
     "enchantment.PiercingEnchantmentMixin"
   ],
