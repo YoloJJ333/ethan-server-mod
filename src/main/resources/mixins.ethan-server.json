@@ -4,6 +4,7 @@
   "package": "yolojj333.ethanserver.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "BanCommandMixin",
     "GoatHornItemMixin",
     "MerchantEntityMixin",
     "enchantment.ExperienceOrbEntityMixin",
@@ -12,6 +13,7 @@
     "enchantment.PiercingEnchantmentMixin"
   ],
   "server": [
+    "PardonCommandMixin",
     "WhitelistCommandMixin"
   ],
   "client": [
