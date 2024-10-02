@@ -4,6 +4,8 @@
   "package": "yolojj333.ethanserver.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "FireworkRocketItemMixin",
+    "FireworkRocketRecipeMixin",
     "GoatHornItemMixin",
     "MerchantEntityMixin",
     "enchantment.ExperienceOrbEntityMixin",
