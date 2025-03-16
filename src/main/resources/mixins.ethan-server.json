@@ -10,8 +10,7 @@
     "enchantment.PiercingEnchantmentMixin",
     "entity.MerchantEntityMixin",
     "item.GoatHornItemMixin",
-    "recipe.FireworkRocketRecipeMixin",
-    "server.ServerPlayNetworkHandlerMixin"
+    "recipe.FireworkRocketRecipeMixin"
   ],
   "server": [
     "server.command.BanCommandMixin",
