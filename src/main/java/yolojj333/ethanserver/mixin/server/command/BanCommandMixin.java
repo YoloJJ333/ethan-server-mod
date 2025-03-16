@@ -14,7 +14,7 @@ import java.util.function.Predicate;
 
 @Environment(EnvType.SERVER)
 @Mixin(BanCommand.class)
-public class BanCommandMixin {
+public abstract class BanCommandMixin {
     @Redirect(
             method = "register",
             at = @At(

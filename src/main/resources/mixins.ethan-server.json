@@ -4,14 +4,14 @@
   "package": "yolojj333.ethanserver.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "item.FireworkRocketItemMixin",
-    "recipe.FireworkRocketRecipeMixin",
-    "item.GoatHornItemMixin",
-    "entity.MerchantEntityMixin",
     "enchantment.ExperienceOrbEntityMixin",
     "enchantment.InfinityEnchantmentMixin",
     "enchantment.MultishotEnchantmentMixin",
-    "enchantment.PiercingEnchantmentMixin"
+    "enchantment.PiercingEnchantmentMixin",
+    "entity.MerchantEntityMixin",
+    "item.GoatHornItemMixin",
+    "recipe.FireworkRocketRecipeMixin",
+    "server.ServerPlayNetworkHandlerMixin"
   ],
   "server": [
     "server.command.BanCommandMixin",

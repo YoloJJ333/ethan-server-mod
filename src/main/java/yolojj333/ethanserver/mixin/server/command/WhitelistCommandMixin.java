@@ -14,7 +14,7 @@ import java.util.function.Predicate;
 
 @Environment(EnvType.SERVER)
 @Mixin(WhitelistCommand.class)
-public class WhitelistCommandMixin {
+public abstract class WhitelistCommandMixin {
     @Redirect(
             method = "register",
             at = @At(

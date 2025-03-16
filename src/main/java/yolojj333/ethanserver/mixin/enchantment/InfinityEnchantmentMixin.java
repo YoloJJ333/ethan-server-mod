@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(InfinityEnchantment.class)
-public class InfinityEnchantmentMixin extends Enchantment {
+public abstract class InfinityEnchantmentMixin extends Enchantment {
     protected InfinityEnchantmentMixin(Rarity weight, EnchantmentTarget target, EquipmentSlot[] slotTypes) {
         super(weight, target, slotTypes);
     }

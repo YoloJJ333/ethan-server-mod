@@ -6,7 +6,7 @@ import org.spongepowered.asm.mixin.injection.Constant;
 import org.spongepowered.asm.mixin.injection.ModifyConstant;
 
 @Mixin(FireworkRocketRecipe.class)
-public class FireworkRocketRecipeMixin {
+public abstract class FireworkRocketRecipeMixin {
     @ModifyConstant(
         method = "matches(Lnet/minecraft/inventory/RecipeInputInventory;Lnet/minecraft/world/World;)Z",
         constant = @Constant(intValue = 3)

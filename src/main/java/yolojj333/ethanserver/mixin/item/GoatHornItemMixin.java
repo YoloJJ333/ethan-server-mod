@@ -8,7 +8,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
 
 @Mixin(GoatHornItem.class)
-public class GoatHornItemMixin {
+public abstract class GoatHornItemMixin {
     @Redirect(
             method = "use",
             at = @At(
