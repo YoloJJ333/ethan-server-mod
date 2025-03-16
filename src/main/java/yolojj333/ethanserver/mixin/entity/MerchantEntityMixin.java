@@ -1,4 +1,4 @@
-package yolojj333.ethanserver.mixin;
+package yolojj333.ethanserver.mixin.entity;
 
 import net.minecraft.entity.passive.MerchantEntity;
 import net.minecraft.entity.player.PlayerEntity;

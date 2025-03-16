@@ -1,4 +1,4 @@
-package yolojj333.ethanserver.mixin;
+package yolojj333.ethanserver.mixin.item;
 
 import net.minecraft.item.FireworkRocketItem;
 import org.spongepowered.asm.mixin.Final;

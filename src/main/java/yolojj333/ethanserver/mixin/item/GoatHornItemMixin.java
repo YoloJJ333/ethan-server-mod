@@ -1,4 +1,4 @@
-package yolojj333.ethanserver.mixin;
+package yolojj333.ethanserver.mixin.item;
 
 import net.minecraft.entity.player.ItemCooldownManager;
 import net.minecraft.item.GoatHornItem;

@@ -1,4 +1,4 @@
-package yolojj333.ethanserver.mixin;
+package yolojj333.ethanserver.mixin.server.command;
 
 import com.mojang.brigadier.builder.ArgumentBuilder;
 import com.mojang.brigadier.builder.LiteralArgumentBuilder;

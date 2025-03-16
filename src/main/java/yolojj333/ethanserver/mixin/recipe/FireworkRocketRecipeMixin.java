@@ -1,4 +1,4 @@
-package yolojj333.ethanserver.mixin;
+package yolojj333.ethanserver.mixin.recipe;
 
 import net.minecraft.recipe.FireworkRocketRecipe;
 import org.spongepowered.asm.mixin.Mixin;
